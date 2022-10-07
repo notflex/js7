@@ -14,6 +14,11 @@ public class main {
         String result = null;
         for(String word : words){
             if (count < 5) {
+                result = word.replaceAll("[^a-zA-Z]", "");
+                if (result != null){
+                    System.out.println("Это не ip адрес");
+                    break;
+                }
                 int i = Integer.parseInt(word.trim());
                 if (i > 255) {
                     System.out.println("Это не ip адрес");
