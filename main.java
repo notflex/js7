@@ -19,12 +19,11 @@ public class main {
                     System.out.println("Это не ip адрес");
                     break;
                 }
-                count+=1;
             }
-            else{
-                System.out.println("Это не ip адрес");
-                break;
-            }
+            count+=1;
+        }
+        if(count >=5){
+            System.out.println("Это Не ip адрес");
         }
         if (count == 4){
             System.out.println("Это ip адрес");
